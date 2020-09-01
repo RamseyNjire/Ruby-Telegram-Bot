@@ -1,11 +1,13 @@
 require 'telegram/bot'
+require 'google_places'
 require_relative '../config.rb'
 
 
 class Bot
-  TOKEN = TOKEN_ID
+  @google = GooglePlaces::Client.new(GOOGLE_PLACES_API_KEY)
+
   def initialize
-    Telegram::Bot::Client.run(TOKEN) do |bot|
+    Telegram::Bot::Client.run(TELEGRAM_TOKEN_ID) do |bot|
       bot.listen do |message|
         case message.text
         when '/start'

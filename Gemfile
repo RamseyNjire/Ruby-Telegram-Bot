@@ -8,4 +8,5 @@ gem 'telegram-bot-ruby'
 
 gem 'rspec'
 
+gem 'google_places'
 # gem "rails"
