@@ -8,5 +8,7 @@ gem 'telegram-bot-ruby'
 
 gem 'rspec'
 
-gem 'google_places'
+gem 'json'
+
+gem 'net-http-persistent'
 # gem "rails"
