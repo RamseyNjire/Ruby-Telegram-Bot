@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'telegram/bot'
 require_relative '../config.rb'
 require_relative '../lib/motivational_quotes.rb'
