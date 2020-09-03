@@ -16,6 +16,6 @@ class Quotes
 
   def make_request
     uri = URI('https://type.fit/api/quotes')
-    response = JSON.parse(Net::HTTP.get(uri))
+    JSON.parse(Net::HTTP.get(uri))
   end
 end
