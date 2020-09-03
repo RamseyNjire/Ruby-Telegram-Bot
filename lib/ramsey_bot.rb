@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 require 'telegram/bot'
 require_relative '../config.rb'
 require_relative '../lib/motivational_quotes.rb'
 
-
 class Bot
-
   def initialize
     Telegram::Bot::Client.run(TELEGRAM_TOKEN_ID) do |bot|
       bot.listen do |message|
@@ -16,10 +16,10 @@ class Bot
           bot.api.send_message(chat_id: message.chat.id, text: "Want a quote? Type 'quote' and send, and see what happens!")
         when /quote/i
           quote = Quotes.new.random_quote
-          bot.api.send_message(chat_id: message.chat.id, text: "#{quote['text']}", date: message.date)
+          bot.api.send_message(chat_id: message.chat.id, text: (quote['text']).to_s, date: message.date)
           bot.api.send_message(chat_id: message.chat.id, text: "Want another quote(A.K.A a motivational joke because they make you believe you can be as rich as Jeff Bezos just by waking up at 5 a.m and taking cold showers)? Type 'quote' and send, and see what happens!")
         else
-          bot.api.send_message(chat_id: message.chat.id, text: "Sorry, I don't understand '#{message.text}'. I only understand 'start', 'info', and 'quote'. Try typing 'quote', for example, and see what happens.")  
+          bot.api.send_message(chat_id: message.chat.id, text: "Sorry, I don't understand '#{message.text}'. I only understand 'start', 'info', and 'quote'. Try typing 'quote', for example, and see what happens.")
         end
       end
     end
