@@ -39,7 +39,7 @@
 
 - If you ran `bundle install`, RSpec should be installed, along with all the other dependencies. To run the tests, cd into the top-level project folder and enter the command `rspec`. This will run all tests. It should be noted that the #make_request method is a private method, so its test will naturally fail. To make it pass, temporarily comment out the `private` keyword in the motivational_quotes.rb file. The tests should now pass. Once satisfied, uncomment it so that the #make_request method is private again.
 
-## How to Run Tests
+## More Information
 
 An explainer video for this project can be found on [Youtube](https://youtu.be/6JMy82_KKNQ)
 
