@@ -22,7 +22,18 @@
 
 - Now the rest of the app should run. Go to your terminal, cd into the 'bin' directory of the repo, and enter the command `ruby main.rb`.
 
-- The bot should run. If you search for your bot by its username in Telegram, it should be ready to receive commands. Of course, you can alter the messages in ramsey_bot.rb to something you prefer.
+- The bot should run. If you search for your bot by its username in Telegram, it should be ready to receive commands. 
+
+- Currently, the bot responds to the commands 'start', 'info', and 'quote'. 
+
+- 'Start' will prompt the bot to give some basic info about itself.
+
+- 'Info' will prompt the bot to give some basic info about the creator (me in this case).
+
+- 'Quote' will prompt the bot to give a random inspirational quote.
+
+- Of course, you can alter the messages and commands in ramsey_bot.rb to something you prefer.
+
 
 ## How to Run Tests
 
