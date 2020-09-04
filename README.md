@@ -18,10 +18,15 @@
 - Cd into the repo and create a file in the main directory called 'config.rb'
 - Inside config.rb, type 'TELEGRAM_TOKEN_ID' and set it equal to the API token you got from the BotFather. Make sure the API token is in quotes to make it a string.
 
-- Now the rest of the app should run. Go to your terminal, cd into the 'bin' directory of the repo, and enter the command 'ruby main.rb'
+- Make sure you have Bundler installed in your machine. Once in the project folder (top level director), enter the command `bundle install` in your terminal. This will install the basic dependencies in the Gemfile.
+
+- Now the rest of the app should run. Go to your terminal, cd into the 'bin' directory of the repo, and enter the command `ruby main.rb`.
 
 - The bot should run. If you search for your bot by its username in Telegram, it should be ready to receive commands. Of course, you can alter the messages in ramsey_bot.rb to something you prefer.
 
+## How to Run Tests
+
+- If you ran `bundle install`, RSpec should be installed, along with all the other dependencies. To run the tests, cd into the top-level project folder and enter the command `rspec`. This will run all tests. It should be noted that the #make_request method is a private method, so its test will naturally fail. To make it pass, temporarily comment out the `private` keyword in the motivational_quotes.rb file. The tests should now pass. Once satisfied, uncomment it so that the #make_request method is private again.
 
 ## Authors
 
